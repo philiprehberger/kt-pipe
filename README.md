@@ -1,6 +1,6 @@
 # kt-pipe
 
-[![CI](https://github.com/philiprehberger/kt-pipe/actions/workflows/ci.yml/badge.svg)](https://github.com/philiprehberger/kt-pipe/actions/workflows/ci.yml)
+[![CI](https://github.com/philiprehberger/kt-pipe/actions/workflows/publish.yml/badge.svg)](https://github.com/philiprehberger/kt-pipe/actions/workflows/publish.yml)
 [![Maven Central](https://img.shields.io/maven-central/v/com.philiprehberger/pipe)](https://central.sonatype.com/artifact/com.philiprehberger/pipe)
 
 Function pipeline composition for Kotlin with named stages and error handling.
