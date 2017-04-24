@@ -12,4 +12,4 @@ package com.philiprehberger.pipe
  * @param transform the function to apply to this value
  * @return the result of applying [transform]
  */
-infix fun <A, B> A.pipe(transform: (A) -> B): B = transform(this)
+public infix fun <A, B> A.pipe(transform: (A) -> B): B = transform(this)
