@@ -1,13 +1,10 @@
-# kt-pipe
+# pipe
 
 [![CI](https://github.com/philiprehberger/kt-pipe/actions/workflows/publish.yml/badge.svg)](https://github.com/philiprehberger/kt-pipe/actions/workflows/publish.yml)
 [![Maven Central](https://img.shields.io/maven-central/v/com.philiprehberger/pipe)](https://central.sonatype.com/artifact/com.philiprehberger/pipe)
+[![License](https://img.shields.io/github/license/philiprehberger/kt-pipe)](LICENSE)
 
 Function pipeline composition for Kotlin with named stages and error handling.
-
-## Requirements
-
-- Kotlin 1.9+ / Java 17+
 
 ## Installation
 
@@ -15,7 +12,7 @@ Function pipeline composition for Kotlin with named stages and error handling.
 
 ```kotlin
 dependencies {
-    implementation("com.philiprehberger:pipe:0.1.0")
+    implementation("com.philiprehberger:pipe:0.1.3")
 }
 ```
 
@@ -33,7 +30,7 @@ dependencies {
 <dependency>
     <groupId>com.philiprehberger</groupId>
     <artifactId>pipe</artifactId>
-    <version>0.1.0</version>
+    <version>0.1.3</version>
 </dependency>
 ```
 
