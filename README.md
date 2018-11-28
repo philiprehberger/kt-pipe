@@ -12,7 +12,7 @@ Function pipeline composition for Kotlin with named stages and error handling.
 
 ```kotlin
 dependencies {
-    implementation("com.philiprehberger:pipe:0.1.3")
+    implementation("com.philiprehberger:pipe:0.1.4")
 }
 ```
 
@@ -22,7 +22,7 @@ dependencies {
 <dependency>
     <groupId>com.philiprehberger</groupId>
     <artifactId>pipe</artifactId>
-    <version>0.1.3</version>
+    <version>0.1.4</version>
 </dependency>
 ```
 
