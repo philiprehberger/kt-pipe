@@ -1,6 +1,6 @@
 # pipe
 
-[![CI](https://github.com/philiprehberger/kt-pipe/actions/workflows/publish.yml/badge.svg)](https://github.com/philiprehberger/kt-pipe/actions/workflows/publish.yml)
+[![Tests](https://github.com/philiprehberger/kt-pipe/actions/workflows/publish.yml/badge.svg)](https://github.com/philiprehberger/kt-pipe/actions/workflows/publish.yml)
 [![Maven Central](https://img.shields.io/maven-central/v/com.philiprehberger/pipe)](https://central.sonatype.com/artifact/com.philiprehberger/pipe)
 [![License](https://img.shields.io/github/license/philiprehberger/kt-pipe)](LICENSE)
 
@@ -11,9 +11,7 @@ Function pipeline composition for Kotlin with named stages and error handling.
 ### Gradle (Kotlin DSL)
 
 ```kotlin
-dependencies {
-    implementation("com.philiprehberger:pipe:0.1.4")
-}
+implementation("com.philiprehberger:pipe:0.1.5")
 ```
 
 ### Maven
@@ -22,7 +20,7 @@ dependencies {
 <dependency>
     <groupId>com.philiprehberger</groupId>
     <artifactId>pipe</artifactId>
-    <version>0.1.4</version>
+    <version>0.1.5</version>
 </dependency>
 ```
 
