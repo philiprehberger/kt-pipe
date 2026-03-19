@@ -10,7 +10,7 @@ package com.philiprehberger.pipe
  * @param A the input type
  * @param B the output type
  */
-open class Pipeline<A, B> internal constructor(
+public open class Pipeline<A, B> internal constructor(
     private val stages: List<Stage<*, *>>,
     private val errorHandler: ((String, Throwable) -> Unit)?
 ) {
@@ -22,7 +22,7 @@ open class Pipeline<A, B> internal constructor(
      *         if any stage throws an exception
      */
     @Suppress("UNCHECKED_CAST")
-    open fun execute(input: A): PipelineResult<B> {
+    public open fun execute(input: A): PipelineResult<B> {
         var current: Any? = input
         for (stage in stages) {
             try {
@@ -47,13 +47,13 @@ open class Pipeline<A, B> internal constructor(
  *
  * @param T the output type of the pipeline
  */
-sealed class PipelineResult<out T> {
+public sealed class PipelineResult<out T> {
     /**
      * The pipeline completed successfully.
      *
      * @property value the final output value
      */
-    data class Success<T>(val value: T) : PipelineResult<T>()
+    public data class Success<T>(public val value: T) : PipelineResult<T>()
 
     /**
      * The pipeline failed at a specific stage.
@@ -61,7 +61,7 @@ sealed class PipelineResult<out T> {
      * @property stageName the name of the stage that threw
      * @property error the exception that was thrown
      */
-    data class Failure(val stageName: String, val error: Throwable) : PipelineResult<Nothing>()
+    public data class Failure(public val stageName: String, public val error: Throwable) : PipelineResult<Nothing>()
 }
 
 /**
@@ -78,7 +78,7 @@ sealed class PipelineResult<out T> {
  * @param block the builder configuration
  * @return a configured [Pipeline]
  */
-fun <A, B> pipeline(block: PipelineBuilder<A, B>.() -> Unit): Pipeline<A, B> {
+public fun <A, B> pipeline(block: PipelineBuilder<A, B>.() -> Unit): Pipeline<A, B> {
     val builder = PipelineBuilder<A, B>()
     builder.block()
     return builder.build()
@@ -90,7 +90,7 @@ fun <A, B> pipeline(block: PipelineBuilder<A, B>.() -> Unit): Pipeline<A, B> {
  * @param A the input type of the pipeline
  * @param B the output type of the pipeline
  */
-class PipelineBuilder<A, B> {
+public class PipelineBuilder<A, B> {
     private val stages = mutableListOf<Pipeline.Stage<*, *>>()
     private var errorHandler: ((String, Throwable) -> Unit)? = null
 
@@ -100,7 +100,7 @@ class PipelineBuilder<A, B> {
      * @param name a descriptive name for this stage (used in error reporting)
      * @param transform the function to apply
      */
-    fun <T, R> stage(name: String, transform: (T) -> R) {
+    public fun <T, R> stage(name: String, transform: (T) -> R): Unit {
         stages.add(Pipeline.Stage(name, transform))
     }
 
@@ -112,7 +112,7 @@ class PipelineBuilder<A, B> {
      * @param name a descriptive name for this stage
      * @param transform the function to apply when the condition is true
      */
-    fun <T> stageIf(condition: Boolean, name: String, transform: (T) -> T) {
+    public fun <T> stageIf(condition: Boolean, name: String, transform: (T) -> T): Unit {
         if (condition) {
             stages.add(Pipeline.Stage(name, transform))
         }
@@ -123,7 +123,7 @@ class PipelineBuilder<A, B> {
      *
      * @param handler a callback receiving the stage name and the exception
      */
-    fun onError(handler: (String, Throwable) -> Unit) {
+    public fun onError(handler: (String, Throwable) -> Unit): Unit {
         this.errorHandler = handler
     }
 

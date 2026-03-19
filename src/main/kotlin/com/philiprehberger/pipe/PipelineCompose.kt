@@ -15,7 +15,7 @@ package com.philiprehberger.pipe
  * @param other the pipeline to execute after this one
  * @return a new composed [Pipeline]
  */
-infix fun <A, B, C> Pipeline<A, B>.then(other: Pipeline<B, C>): Pipeline<A, C> {
+public infix fun <A, B, C> Pipeline<A, B>.then(other: Pipeline<B, C>): Pipeline<A, C> {
     return ComposedPipeline(this, other)
 }
 
