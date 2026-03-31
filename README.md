@@ -1,9 +1,8 @@
 # pipe
 
 [![Tests](https://github.com/philiprehberger/kt-pipe/actions/workflows/publish.yml/badge.svg)](https://github.com/philiprehberger/kt-pipe/actions/workflows/publish.yml)
-[![Maven Central](https://img.shields.io/maven-central/v/com.philiprehberger/pipe)](https://central.sonatype.com/artifact/com.philiprehberger/pipe)
-[![License](https://img.shields.io/github/license/philiprehberger/kt-pipe)](LICENSE)
-[![Sponsor](https://img.shields.io/badge/sponsor-GitHub%20Sponsors-ec6cb9)](https://github.com/sponsors/philiprehberger)
+[![Maven Central](https://img.shields.io/maven-central/v/com.philiprehberger/pipe.svg)](https://central.sonatype.com/artifact/com.philiprehberger/pipe)
+[![Last updated](https://img.shields.io/github/last-commit/philiprehberger/kt-pipe)](https://github.com/philiprehberger/kt-pipe/commits/main)
 
 Function pipeline composition for Kotlin with named stages and error handling.
 
@@ -97,6 +96,24 @@ combined.execute("25") // Success("adult")
 ./gradlew build      # Build JAR
 ```
 
+## Support
+
+If you find this project useful:
+
+⭐ [Star the repo](https://github.com/philiprehberger/kt-pipe)
+
+🐛 [Report issues](https://github.com/philiprehberger/kt-pipe/issues?q=is%3Aissue+is%3Aopen+label%3Abug)
+
+💡 [Suggest features](https://github.com/philiprehberger/kt-pipe/issues?q=is%3Aissue+is%3Aopen+label%3Aenhancement)
+
+❤️ [Sponsor development](https://github.com/sponsors/philiprehberger)
+
+🌐 [All Open Source Projects](https://philiprehberger.com/open-source-packages)
+
+💻 [GitHub Profile](https://github.com/philiprehberger)
+
+🔗 [LinkedIn Profile](https://www.linkedin.com/in/philiprehberger)
+
 ## License
 
-MIT
+[MIT](LICENSE)
